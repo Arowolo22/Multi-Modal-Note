@@ -2,6 +2,6 @@
 
 import { randomBytes } from "crypto";
 
-const generateId = () => randomBytes(8).toString("hex");
+const generateId = () => randomBytes(8).toString("hex");    
 
 export default generateId;
