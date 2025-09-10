@@ -2,7 +2,7 @@ import React from 'react'
 import { signInWithEmailAndPassword } from "firebase/auth";
 import {useState} from "react"
 import { auth } from "../config/firebase";
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import toast from "react-hot-toast";
 
 const Login = () => {
@@ -26,9 +26,9 @@ const Login = () => {
         }
     }
   return (
-    <div className="min-h-screen flex items-center justify-center py-12 px-4 shadow-md bg-gray-50 sm:px-6 lg:px-8">
+    <div className="min-h-screen flex items-center justify-center py-12 px-4 shadow-md bg-gray-50  sm:px-6 lg:px-8">
       <div className="max-w-md w-full space-y-8">
-        <div className='flex justify-center'>
+        <div className="flex justify-center">
           <h1 className="mt-6 font-extrabold text-4xl text-blue-900 flex jusify-center item-center">
             NOTE APP
           </h1>
@@ -72,8 +72,11 @@ const Login = () => {
             Sign In
           </button>
 
-
-          
+          <div className="text-sm text-center">
+            <Link to="/register" className="font-medium text-gray-600 text-sm ">
+              Not a member? <span className="text-blue-400">join us.</span>
+            </Link>
+          </div>
         </form>
       </div>
     </div>

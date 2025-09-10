@@ -2,7 +2,7 @@ import React from 'react'
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { useState } from "react";
 import { auth } from "../config/firebase";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import toast from "react-hot-toast";
 
 
@@ -104,6 +104,13 @@ const Register = () => {
           <button className=" group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-blue-900  focus:outline-none focus:ring-2 focus:ring-offset-2">
             Sign Up
           </button>
+
+          <div className="text-sm text-center">
+            <Link to="/login" className="font-medium text-gray-600 text-sm">
+              Already have an account?{" "}
+              <span className="text-blue-400 ">Sign in here</span>
+            </Link>
+          </div>
         </form>
       </div>
     </div>
